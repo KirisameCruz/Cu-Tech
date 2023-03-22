@@ -1,0 +1,767 @@
+@import url("https://fonts.googleapis.com/css?family=Changa%20One");
+@import url("https://fonts.googleapis.com/css?family=Imprima");
+/* SC动画大小（默认200） */
+:root{
+	--sc-width:200px;
+}
+
+/*------------------------------box------------------------------------*/
+#card.yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[author-type="member"] #card {
+	position: relative !important;
+	min-width: 400px;
+	padding: 40px 2em;
+	margin-top: 40px;
+	border: solid;
+	background-color: transparent !important;
+	border-image-source: url(https://s2.loli.net/2023/03/06/N1fUmSDE7MWXzwT.png);
+	border-image-slice: 220 220 220 220 fill;
+	border-image-width: 30px 30px 30px 30px;
+	align-items: center;
+	z-index: -1;
+}
+
+/* ----------------------上舰--------------------------- */
+#card.yt-live-chat-membership-item-renderer {
+	background-color: transparent !important;
+	border-image-source: url(https://s2.loli.net/2023/03/21/gjSMYP8pAK126kF.png);
+	border-image-slice: 0 50 0 50 fill;
+	border-image-width: 0px 40px 0px 40px;
+	padding: 20px 0;
+}
+
+yt-live-chat-membership-item-renderer[show-only-header] #header.yt-live-chat-membership-item-renderer {
+	background-color: transparent !important;
+}
+
+img.style-scope.yt-live-chat-author-badge-renderer {
+	display: none;
+}
+
+#card.yt-live-chat-membership-item-renderer::after {
+	position: absolute;
+	right: 40px;
+	top: 11px;
+	content: "";
+	padding: 50px;
+
+	background-image: url(https://s2.loli.net/2023/03/10/wFd9K6suJ13aIhM.png) !important;
+	background-repeat: no-repeat;
+	background-size: contain;
+	-webkit-animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+
+#card.yt-live-chat-membership-item-renderer::before {
+	content: "";
+	position: absolute;
+	right: calc(50% - 45px);
+	top: 27px;
+	background-image: url(https://s2.loli.net/2023/03/21/P2rv5ZscJBYTChA.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 34px;
+	margin: auto;
+	filter: drop-shadow(5px 5px 2px rgb(255, 0, 0));
+	-webkit-animation: shadow-drop-2-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: shadow-drop-2-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes swing-in-top-fwd {
+	0% {
+		-webkit-transform: rotateX(-100deg);
+		transform: rotateX(-100deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1;
+	}
+}
+
+@keyframes swing-in-top-fwd {
+	0% {
+		-webkit-transform: rotateX(-100deg);
+		transform: rotateX(-100deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+		opacity: 1;
+	}
+}
+
+@keyframes shadow-drop-2-center {
+	0% {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		-webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+		filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+	}
+
+	100% {
+		-webkit-transform: translateZ(50px);
+		transform: translateZ(50px);
+		-webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.8));
+		filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.8));
+	}
+}
+/* -----------------------徽章-------------------------- */
+img.yt-live-chat-author-badge-renderer {
+	position: absolute;
+	top: -28px;
+	left: 25px;
+	height: 25px;
+	width: 25px;
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.28));
+}
+
+.yt-icon-container.yt-icon,
+yt-icon {
+	position: absolute;
+	background-image: url(https://s2.loli.net/2023/03/09/XLb57JxiQuEkGeV.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 20px;
+	right: 0px;
+	top: 0px;
+}
+
+.yt-icon-container.yt-icon::after,
+yt-icon::after {
+	content: "";
+	background-image: url(https://s2.loli.net/2023/03/09/zIuHNyfAsv7pqDj.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 42px;
+	position: absolute !important;
+	right: -4px;
+	top: -2px;
+	z-index: -1 !important;
+}
+
+yt-icon::before {
+	content: "";
+	position: absolute;
+	width: 30%;
+	height: 100%;
+	background-image: linear-gradient(90deg, #fff5, #fffB, #fff5);
+	transform-origin: left top;
+	transform: skewx(-45deg);
+	left: 50px;
+	mix-blend-mode: lighten;
+	top: 0;
+	-webkit-mask-image: url(https://s2.loli.net/2023/03/09/XLb57JxiQuEkGeV.png);
+}
+
+svg.style-scope.yt-icon {
+	display: none !important;
+}
+
+/* opretor */
+.yt-icon-container.yt-icon,
+yt-icon {
+	background-image: url(https://s2.loli.net/2023/03/09/XLb57JxiQuEkGeV.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 20px;
+}
+
+/*隐藏头像*/
+yt-live-chat-text-message-renderer #img {
+	display: none;
+}
+
+yt-live-chat-text-message-renderer #message {
+	position: relative;
+}
+
+yt-live-chat-text-message-renderer #author-name,
+yt-live-chat-text-message-renderer #yt-live-chat-author-badge-renderer {
+	position: relative;
+}
+
+yt-live-chat-text-message-renderer #author-name,
+yt-live-chat-text-message-renderer #author-name [type="owner"] {
+	font-size: 22px !important;
+	padding-top: 10px;
+
+	margin-top: 0px;
+	min-width: 180px;
+	height: 40px;
+	color: #fef7df !important;
+	position: absolute;
+	left: 18px;
+	top: -40px;
+	border: solid;
+	border-image-source: url(https://s2.loli.net/2023/03/06/bPF2s7vaB6cQI1H.png);
+	border-image-slice: 0 140 25 140 fill;
+	border-image-width: 0px 20px 1px 20px;
+	text-align: center;
+	justify-content: center;
+	font-family: "华文中宋";
+	font-weight: bolder !important;
+	text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+	;
+	z-index: 0;
+}
+
+yt-live-chat-text-message-renderer #chat-badges {
+	/display: none;
+}
+
+//yt-live-chat-text-message-renderer #author-name::before,
+yt-live-chat-text-message-renderer #author-name [type="owner"]::before {
+	position: absolute;
+	content: " ";
+	padding: 0px;
+	margin: 0px;
+	left: -20px;
+	top: -20px;
+	min-width: 180px;
+	min-height: 40px;
+	border: solid;
+	border-image-source: url(https://s2.loli.net/2023/03/06/bPF2s7vaB6cQI1H.png);
+	border-image-slice: 140 140 25 140 fill;
+	border-width: 20px 20px 1px 20px;
+	z-index: 1;
+}
+
+yt-live-chat-text-message-renderer #author-name::after,
+yt-live-chat-text-message-renderer #author-name [type="owner"]::after {
+	content: " ";
+}
+
+
+/*------------next page----------*/
+yt-live-chat-text-message-renderer #card::after,
+yt-live-chat-text-message-renderer #card [author-type="member"]::after {
+	content: " ";
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(https://s2.loli.net/2023/03/07/8aT2Lt4Rswohe1u.png);
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+	filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+	animation: slide-right 0.7s infinite;
+
+}
+
+yt-live-chat-text-message-renderer #chat-medal {
+	position: absolute;
+	padding: 0px;
+
+	margin: 0px;
+	right: 0px;
+}
+
+@keyframes slide-right {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	40% {
+		-webkit-transform: translateX(5px);
+		transform: translateX(5px);
+	}
+}
+
+yt-live-chat-paid-message-renderer {
+	/background-color: antiquewhite;
+
+}
+
+yt-live-chat-paid-message-renderer #card::after {
+	content: "";
+	position: absolute;
+	padding: var(--sc-width);
+	bottom: -200%;
+	left: calc(50% - var(--sc-width));
+	background-image: url(https://s2.loli.net/2023/03/07/8KLq1NOSHnYpuzh.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 20;
+	transform-origin: 550px 400px;
+	animation: 1.5s sc steps(6, jump-none) forwards;
+	animation-delay: 0.4s;
+}
+
+yt-live-chat-paid-message-renderer #card::before {
+	content: "";
+	position: absolute;
+	padding: var(--sc-width);
+	bottom: -200%;
+	left: calc(50% - var(--sc-width));
+	background-image: url(https://s2.loli.net/2023/03/07/8bndr3voMOuR1sZ.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 21;
+	transform-origin: center;
+	animation: 1.5s sc_text steps(6, jump-none) forwards;
+	animation-delay: 0.4s;
+}
+
+@keyframes sc {
+	0% {
+		transform: translate(5px, 5px) scale(200%);
+		opacity: 1;
+	}
+
+	1% {
+		transform: translate(0px, 0px) scale(100%);
+		opacity: 1;
+	}
+
+	3% {
+		transform: translate(-10px, -5px) scale(100%);
+		opacity: 1;
+	}
+
+	6% {
+		transform: translate(9px, -3px) scale(100%);
+		opacity: 1;
+	}
+
+	9% {
+		transform: translate(-8px, 7px) scale(100%);
+		opacity: 1;
+	}
+
+	12% {
+		transform: translate(6px, -5px) scale(100%);
+		opacity: 1;
+	}
+
+	15% {
+		transform: translate(-2px, 1px) scale(100%);
+		opacity: 1;
+	}
+
+	80% {
+		transform: translate(-2px, 1px) scale(100%);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0px, 0px) scale(100%);
+		opacity: 0;
+	}
+
+}
+
+@keyframes sc_text {
+	0% {
+		transform: translate(-5px, -5px) scale(120%);
+		opacity: 0;
+	}
+
+	3% {
+		transform: translate(10px, 5px) scale(105%);
+		opacity: 1;
+	}
+
+	6% {
+		transform: translate(-9px, 3px) scale(88%);
+		opacity: 1;
+	}
+
+	9% {
+		transform: translate(8px, -7px) scale(100%);
+		opacity: 1;
+	}
+
+	12% {
+		transform: translate(-6px, 5px) scale(92%);
+		opacity: 1;
+	}
+
+	15% {
+		transform: translate(2px, -1px) scale(100%);
+		opacity: 1;
+	}
+
+	80% {
+		transform: translate(2px, -1px) scale(100%);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0px, 0px) scale(100%);
+		opacity: 0;
+	}
+}
+
+/*------------sc-----------*/
+/* 关闭头像 */
+#img.yt-img-shadow,
+#author-photo.yt-live-chat-paid-message-renderer {
+	display: none;
+}
+
+#header-content-primary-column.yt-live-chat-paid-message-renderer {
+	flex-direction: row;
+}
+
+#card.yt-live-chat-paid-message-renderer {
+	border-radius: 0;
+	padding-bottom: 0;
+	width: 100%;
+	border-image-source: url(https://s2.loli.net/2023/03/08/JCmVlgD2cbvLEAG.png);
+	border-image-slice: 0 155 0 155 fill;
+	border-image-width: 0px 155px 0px 155px;
+	min-height: 4em;
+	box-shadow: none;
+	/animation: slide-sc 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#header.yt-live-chat-paid-message-renderer {
+	border-radius: 0;
+	background-color: transparent;
+	padding: 1em 10% 1em 2em;
+	text-shadow: 0px 0px 5px #000;
+
+}
+
+#author-name.yt-live-chat-paid-message-renderer,
+#purchase-amount.style-scope.yt-live-chat-paid-message-renderer {
+	color: #222 !important;
+	font-size: 20px !important;
+	text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.4);
+	font-family: "哥特宋";
+}
+
+#author-name.yt-live-chat-paid-message-renderer {
+	font-size: 24px !important;
+}
+
+#content.yt-live-chat-paid-message-renderer {
+	background: transparent;
+	border-radius: 0;
+}
+
+#content.yt-live-chat-paid-message-renderer {
+	color: #222 !important;
+	font-family: "哥特宋";
+	padding: 0 10% 1em 2em;
+}
+
+#message.style-scope.yt-live-chat-paid-message-renderer {
+	color: #222 !important;
+	font-family: "哥特宋";
+	text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.4);
+}
+
+yt-live-chat-paid-message-renderer[show-only-header] #header.yt-live-chat-paid-message-renderer {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+yt-live-chat-paid-message-renderer[show-only-header] #content.yt-live-chat-paid-message-renderer {
+	display: none;
+}
+
+@keyframes slide-sc {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+
+/*------------next page----------*/
+yt-live-chat-text-message-renderer #card::after,
+yt-live-chat-text-message-renderer #card [author-type="member"]::after {
+	content: " ";
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(https://s2.loli.net/2023/03/07/8aT2Lt4Rswohe1u.png);
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+	filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+	animation: slide-right 0.7s infinite;
+
+}
+
+yt-live-chat-text-message-renderer #chat-medal {
+	position: absolute;
+	padding: 0px;
+
+	margin: 0px;
+	right: 0px;
+}
+
+@keyframes slide-right {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	40% {
+		-webkit-transform: translateX(5px);
+		transform: translateX(5px);
+	}
+}
+
+yt-live-chat-paid-message-renderer {
+	/background-color: antiquewhite;
+
+}
+
+yt-live-chat-paid-message-renderer #card::after {
+	content: "";
+	position: absolute;
+	padding: 250px;
+	bottom: -200%;
+	left: calc(50% - 250px);
+	background-image: url(https://s2.loli.net/2023/03/07/8KLq1NOSHnYpuzh.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 20;
+	transform-origin: 550px 400px;
+	animation: 1.5s sc steps(6, jump-none) forwards;
+	animation-delay: 0.4s;
+}
+
+yt-live-chat-paid-message-renderer #card::before {
+	content: "";
+	position: absolute;
+	padding: 250px;
+	bottom: -200%;
+	left: calc(50% - 250px);
+	background-image: url(https://s2.loli.net/2023/03/07/8bndr3voMOuR1sZ.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 21;
+	transform-origin: center;
+	animation: 1.5s sc_text steps(6, jump-none) forwards;
+	animation-delay: 0.4s;
+}
+
+@keyframes sc {
+	0% {
+		transform: translate(5px, 5px) scale(200%);
+		opacity: 1;
+	}
+
+	1% {
+		transform: translate(0px, 0px) scale(100%);
+		opacity: 1;
+	}
+
+	3% {
+		transform: translate(-10px, -5px) scale(100%);
+		opacity: 1;
+	}
+
+	6% {
+		transform: translate(9px, -3px) scale(100%);
+		opacity: 1;
+	}
+
+	9% {
+		transform: translate(-8px, 7px) scale(100%);
+		opacity: 1;
+	}
+
+	12% {
+		transform: translate(6px, -5px) scale(100%);
+		opacity: 1;
+	}
+
+	15% {
+		transform: translate(-2px, 1px) scale(100%);
+		opacity: 1;
+	}
+
+	80% {
+		transform: translate(0px, 0px) scale(100%);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0px, 0px) scale(100%);
+		opacity: 0;
+	}
+
+}
+
+@keyframes sc_text {
+	0% {
+		transform: translate(-5px, -5px) scale(120%);
+		opacity: 0;
+	}
+
+	3% {
+		transform: translate(10px, 5px) scale(105%);
+		opacity: 1;
+	}
+
+	6% {
+		transform: translate(-9px, 3px) scale(88%);
+		opacity: 1;
+	}
+
+	9% {
+		transform: translate(8px, -7px) scale(100%);
+		opacity: 1;
+	}
+
+	12% {
+		transform: translate(-6px, 5px) scale(92%);
+		opacity: 1;
+	}
+
+	15% {
+		transform: translate(2px, -1px) scale(100%);
+		opacity: 1;
+	}
+
+	80% {
+		transform: translate(0, 0px) scale(100%);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0px, 0px) scale(100%);
+		opacity: 0;
+	}
+}
+
+/*------------sc-----------*/
+/* 关闭头像 */
+#img.yt-img-shadow,
+#author-photo.yt-live-chat-paid-message-renderer {
+	display: none;
+}
+
+#header-content-primary-column.yt-live-chat-paid-message-renderer {
+	flex-direction: row;
+}
+
+#card.yt-live-chat-paid-message-renderer {
+	border-radius: 0;
+	padding-bottom: 0;
+	width: 100%;
+	border-image-source: url(https://s2.loli.net/2023/03/08/JCmVlgD2cbvLEAG.png);
+	border-image-slice: 0 155 0 155 fill;
+	border-image-width: 0px 155px 0px 155px;
+	min-height: 4em;
+	box-shadow: none;
+	animation: slide-sc 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#header.yt-live-chat-paid-message-renderer {
+	border-radius: 0;
+	background-color: transparent;
+	padding: 1em 10% 1em 2em;
+	text-shadow: 0px 0px 5px #000;
+
+}
+
+#author-name.yt-live-chat-paid-message-renderer,
+#purchase-amount.style-scope.yt-live-chat-paid-message-renderer {
+	color: #222 !important;
+	font-size: 20px !important;
+	text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.4);
+	font-family: "哥特宋";
+}
+
+#author-name.yt-live-chat-paid-message-renderer {
+	font-size: 24px !important;
+}
+
+#content.yt-live-chat-paid-message-renderer {
+	background: transparent;
+	border-radius: 0;
+}
+
+#content.yt-live-chat-paid-message-renderer {
+	color: #222 !important;
+	font-family: "哥特宋";
+	padding: 0 10% 1em 2em;
+}
+
+#message.style-scope.yt-live-chat-paid-message-renderer {
+	color: #222 !important;
+	font-family: "哥特宋";
+	text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.4);
+}
+
+yt-live-chat-paid-message-renderer[show-only-header] #header.yt-live-chat-paid-message-renderer {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+yt-live-chat-paid-message-renderer[show-only-header] #content.yt-live-chat-paid-message-renderer {
+	display: none;
+}
+
+@keyframes slide-sc {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-sc2 {
+	0% {
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	}
+
+	100% {
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+	}
+}
+
+/* ------------粉丝牌(未完成)----------- */
+#chat-medal{
+position:absolute;
+left:0px;
+top:0px;
+display:none;
+}
+#medal-card{
+padding:0px 1px 0px 9px;
+background:transparent !important;
+border-image-source: url(https://s2.loli.net/2023/03/21/FZwqnm7lGCf9euh.png)  !important;
+border-image-slice: 0 22 0 66 fill!important;
+border-image-width: 0px 6px 0px 18px !important;
+
+
+}
+#medal-name,#medal-level{
+background:transparent !important;}
+#medal-name,#medal-level{
+	font-family: "哥特宋";
+}
+
